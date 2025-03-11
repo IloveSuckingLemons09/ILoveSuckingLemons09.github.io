@@ -10,28 +10,36 @@ document.addEventListener("DOMContentLoaded", function() {
     const exerciseBtn = document.getElementById('exercise-btn');
     const workoutBtn = document.getElementById('workout-btn');
 
-    const validUsername = "group 4";
-    const validPassword = "webdeveloper";
+   // Store credentials securely (not recommended for sensitive data)
+localStorage.setItem('username', 'group4');
+localStorage.setItem('password', 'webdeveloper');
 
-    if (!loginForm) {
-        console.error("Login form not found!");
-        return;
+loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if (username === localStorage.getItem('username') && password === localStorage.getItem('password')) {
+        console.log("Login successful!");
+        loginContainer.style.display = 'none';
+        navbar.classList.remove('d-none');
+    } else {
+        alert("Invalid username or password!");
     }
+});
 
-    loginForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const username = document.getElementById('username').value.trim();
-            const password = document.getElementById('password').value.trim();
+    document.querySelectorAll('.nav-link').forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelector('.navbar-collapse').classList.remove('show');
+    });
+});
+
+    document.getElementById('logout-btn').addEventListener('click', function() {
+    localStorage.clear();
+    location.reload();
+});
 
 
-    if (username === "group 4" && password === "webdeveloper") {
-                console.log("Login successful!");
-                loginContainer.style.display = 'none'; // Hide login form
-                navbar.classList.remove('d-none'); // Show navbar
-            } else {
-                alert("Invalid username or password!");
-            }
-        });
 
     if (exerciseBtn) {
         exerciseBtn.addEventListener('click', function() {
@@ -66,6 +74,7 @@ function updateDisplay() {
 
 // Start Timer
 document.getElementById('start-btn').addEventListener('click', function () {
+    document.getElementById('timer-section').style.display = "block";
     if (!isRunning) {
         isRunning = true;
         timer = setInterval(() => {
