@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const workoutBtn = document.getElementById('workout-btn');
 
    // Store credentials securely (not recommended for sensitive data)
-localStorage.setItem('username', 'group4');
-localStorage.setItem('password', 'webdeveloper');
+localStorage.setItem('username', 'workout_buddy');
+localStorage.setItem('password', 'lawrence112026');
 
 loginForm.addEventListener('submit', function(event) {
     event.preventDefault();
