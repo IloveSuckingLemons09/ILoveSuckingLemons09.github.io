@@ -7,8 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
-    <body>
+<body>
 
     <!-- Login Form -->
     <div class="container mt-5 pt-5">
@@ -27,108 +26,47 @@
         </div>
     </div>
 
-<!-- Navbar (Hidden initially) -->
+    <!-- Navbar (Hidden initially) -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top d-none">
         <div class="container-fluid">
-            <!-- Brand -->
             <a class="navbar-brand" href="#">
-                <img src="https://files.oaiusercontent.com/file-KjXQUqygzWkSbjo9VRUXeE?se=2025-03-11T04%3A23%3A07Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D63b406cb-1f31-4e53-93d1-8b3a29b54bd5.webp&sig=/nsIBYYpwaxCqIzLzHfcTaRypunmnwi8kky/zU8w%2BT4%3D" alt="Workout Buddy Logo" width="40" height="40" class="d-inline-block align-text-top">
+                <img src="logo.webp" alt="Workout Buddy Logo" width="40" height="40">
                 Workout Buddy
             </a>
-
-<!-- Mobile Menu Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-<!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#" id="timer-btn">Timer</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Music</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Logging Out</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-
-                <!-- Dropdown for Timer and Exercises -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        MENU
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="menuDropdown">
-                        <li><a class="dropdown-item" href="#" id="exercise-btn">Exercises</a></li>
-                        <li><a class="dropdown-item" href="#" id="workout-btn">Workouts</a></li>
-                        <li><a class="dropdown-item" href="#">Health</a></li>
-                        <li><a class="dropdown-item" href="#">VitalEats</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" id="timer-btn">Timer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Music</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Logging Out</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" data-bs-toggle="dropdown">MENU</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="exercise-btn">Exercises</a></li>
+                            <li><a class="dropdown-item" href="#" id="workout-btn">Workouts</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <button class="theme-toggle-btn" id="theme-toggle">Dark Mode</button>
         </div>
+    </nav>
 
-<!-- Theme Toggle Button -->
-<button class="theme-toggle-btn" id="theme-toggle"> Dark Mode</button>
-</div> <!-- Remove this extra closing div -->
-</nav>
-
-    <!-- Timer Section (Hidden Initially) -->
-<div id="timer-section" style="display: none; text-align: center; padding: 20px;">
-    <h2>Workout Timer</h2>
-    <p id="timer-display" style="font-size: 2rem; font-weight: bold;">00:00</p>
-    <button id="start-btn">Start</button>
-    <button id="stop-btn">Stop</button>
-    <button id="reset-btn">Reset</button>
-</div>
-
-    <!-- Exercises Section -->
-    <div id="exercise-section" style="display: none;">
-        <div class="exercise-title">Exercises</div>
-        <div class="photo-container">
-            <div class="box">
-                <img src="https://homeworkouts.org/wp-content/uploads/anim-push-ups.gif" alt="Push-up">
-                <div class="description">Push-up: Strengthens upper body.</div>
-            </div>
-            <div class="box">
-                <img src="https://homeworkouts.org/wp-content/uploads/anim-sit-ups.gif" alt="Sit-up">
-                <div class="description">Sit-up: Targets the core muscles.</div>
-            </div>
-            <div class="box">
-                <img src="https://www.inspireusafoundation.org/wp-content/uploads/2022/08/chain-sumo-squat.gif" alt="Squat">
-                <div class="description">Squats: Builds lower body strength.</div>
-            </div>
-            <div class="box">
-                <img src="https://fitnessprogramer.com/wp-content/uploads/2021/02/plank.gif" alt="Plank">
-                <div class="description">Plank: Strengthens core and back.</div>
-            </div>
-            <div class="box">
-                <img src="https://fitnessprogramer.com/wp-content/uploads/2021/08/High-Knee-Run.gif" alt="High Knees">
-                <div class="description">High Knees: Great for cardio.</div>
-            </div>
-            <div class="box">
-                <img src="https://i.ytimg.com/vi/uckYc_gtyf8/maxresdefault.jpg" alt="Mountain Climbers">
-                <div class="description">Mountain Climbers: Full-body workout.</div>
-            </div>
-        </div>
+    <!-- Timer Section -->
+    <div id="timer-section" style="display: none; text-align: center;">
+        <h2>Workout Timer</h2>
+        <p id="timer-display">00:00</p>
+        <button id="start-btn">Start</button>
+        <button id="stop-btn">Stop</button>
+        <button id="reset-btn">Reset</button>
     </div>
 
-    <!-- Workout Plans Section -->
-    <div id="workout-section" style="display: none;">
-        <div class="container">
-            <h1 style="color: white;">Choose Your Workout Plan</h1>
-            <div class="workout-plan-buttons">
-                <button onclick="showWorkout('morning')">Morning Workout</button>
-                <button onclick="showWorkout('daily')">Daily Workout</button>
-                <button onclick="showWorkout('sevenDays')">7 Days Workout</button>
-            </div>
-            <div id="workoutDetails" class="workout-plan-details" style="display:none;">
-                <h2 id="workoutTitle"></h2>
-                <p id="workoutDescription"></p>
-                <ul id="exercises"></ul>
-            </div>
-        </div>
-    </div>
-    <!-- Bootstrap JS (Fixed Syntax) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Footer -->
+    <script src="script.js"></script>
+
     <footer class="footer">
         <p>&copy; 2025 Workout Buddy. All rights reserved.</p>
     </footer>
