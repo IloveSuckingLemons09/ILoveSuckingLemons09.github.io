@@ -1,93 +1,60 @@
 /* Global Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Default light mode */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            color: #000;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: #000;
+}
 
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #333;
-            color: #fff;
-        }
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
 
-
-/* Navbar Styling */
-
-    .navbar {
-    background-color: white !important; /* White background */
+.navbar {
+    background-color: white !important;
     padding: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-    .navbar-nav {
-    display: flex;
-    flex-wrap: wrap;
-}
-        .navbar-brand, .nav-link {
-    color: #000 !important; /* Black text color */
+.navbar-brand, .nav-link {
+    color: #000 !important;
 }
 
-    .navbar-nav .nav-link:hover {
-    color: #ff0000 !important; /* Red on hover */
+.navbar-nav .nav-link:hover {
+    color: #ff0000 !important;
 }
 
-
-
-        /* Toggle button */
-        .theme-toggle-btn {
-            background-color: transparent;
-            border: 2px solid #007BFF;
-            color: #007BFF;
-            padding: 10px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-left: 20px;
-        }
-
-        .theme-toggle-btn:hover {
-            background-color: #007BFF;
-            color: white;
-        }
-
-    /* Dropdown Styling */
-.dropdown-menu {
-    background-color: red !important; /* Red background */
-    border-radius: 8px;
-    border: none;
+.theme-toggle-btn {
+    background-color: transparent;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
 }
 
-.dropdown-item {
-    color: white !important; /* White text */
+.theme-toggle-btn:hover {
+    background-color: #007BFF;
+    color: white;
 }
 
-.dropdown-item:hover {
-    background-color: darkred !important; /* Dark red on hover */
-    color: #ffd700 !important; /* Gold on hover */
-}
-
-/* Center Login Form */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
 }
 
 .login-container {
@@ -96,22 +63,9 @@
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 100%;
-    max-width: 400px; /* Ensures a good size on all screens */
+    max-width: 400px;
 }
 
-
-h2 {
-    margin-bottom: 20px;
-}
-
-label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    display: block;
-}
-
-/* Improve Input Fields */
 input[type="text"], input[type="password"] {
     width: 100%;
     padding: 12px;
@@ -121,46 +75,11 @@ input[type="text"], input[type="password"] {
     font-size: 16px;
 }
 
-/* Timer Section Styling */
-#timer-section {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    margin: 50px auto;
-}
-
-#timer-display {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #007BFF;
-    margin-bottom: 20px;
-}
-
-button {
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-
-/* Button Styling */
 button {
     width: 100%;
     padding: 12px;
     background: #007bff;
     color: white;
-    cursor: pointer;
     border: none;
     border-radius: 5px;
     font-size: 18px;
@@ -168,11 +87,6 @@ button {
 
 button:hover {
     background: #0056b3;
-}
-
-/* Forgot Password */
-.forgot-password {
-    margin-top: 10px;
 }
 
 .forgot-password a {
@@ -184,55 +98,6 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Photo Container */
-.photo-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
-}
-
-.photo-container .box {
-    background: #fff;
-    border: 5px solid #333;
-    padding: 20px;
-    width: calc(33.33% - 40px);
-    text-align: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.photo-container .box img {
-    width: 100%;
-    height: auto;
-}
-
-/* Workout Plan */
-.workout-plan {
-    padding: 20px;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.workout-plan h2 {
-    color: #007BFF;
-}
-
-.workout-plan-details {
-    display: none;
-    background: #fff;
-    padding: 20px;
-    margin-top: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-/* Footer */
 .footer {
     position: fixed;
     bottom: 0;
